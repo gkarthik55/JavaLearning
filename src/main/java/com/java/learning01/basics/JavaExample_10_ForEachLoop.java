@@ -15,7 +15,7 @@ public class JavaExample_10_ForEachLoop
 		
 		//Limitations of for-each loop:
 
-		// For-each loops are not appropriate when you want to modify the array:
+		// For-each loop is not appropriate when you want to modify the array:
 		for (int num : marks) 
 		{
 		    // only changes num, not the array element

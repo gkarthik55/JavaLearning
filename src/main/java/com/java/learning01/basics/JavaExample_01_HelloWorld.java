@@ -1,9 +1,9 @@
 package com.java.learning01.basics;
- 
-class JavaExample_01_HelloWorld
+
+class JavaExample_01_HelloWorld 
 {
-	public static void main(String args[])
+	public static void main(String args[]) 
 	{
-		System.out.println("Hello World");
+		System.out.println("Hello World Java.");
 	}
 }

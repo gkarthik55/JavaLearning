@@ -1,62 +1,69 @@
 package com.java.learning01.basics;
 
+import java.util.Scanner;
+
 //Java program to demonstrate switch case with multiple cases without break statements 
 
 public class JavaExample_12_SwitchCase 
-{
+{	
 	public static void main(String[] args) 
 	{
-		 int day = 2; 
-		 
-	     String dayType; 
-	     String dayString; 
+		Scanner sc = new Scanner(System.in);
 
-	     switch (day) 
-	     { 
-		     case 1: 
-		         dayString = "Monday"; 
-		         break; 
-		     case 2: 
-		         dayString = "Tuesday"; 
-		         break; 
-		     case 3: 
-		         dayString = "Wednesday"; 
-		         break; 
-		     case 4: 
-		         dayString = "Thursday"; 
-		         break; 
-		     case 5: 
-		         dayString = "Friday"; 
-		         break; 
-		     case 6: 
-		         dayString = "Saturday"; 
-		         break; 
-		     case 7: 
-		         dayString = "Sunday"; 
-		         break; 
-		     default: 
-		         dayString = "Invalid day"; 
-	     } 
+		System.out.println("Enter the number between 1-7.");
+		int day = sc.nextInt();
+		String dayOfTheWeek=null;
+		String dayType=null;
 
-	     switch (day) 
-	     { 
-		     // multiple cases without break statements 
-		     case 1: 
-		     case 2: 
-		     case 3: 
-		     case 4: 
-		     case 5: 
-		         dayType = "Weekday"; 
-		         break; 
-		     case 6: 
-		     case 7: 
-		         dayType = "Weekend"; 
-		         break; 
+		switch (day) 
+		{
+			case 1:
+				dayOfTheWeek = "Monday";
+				break;
+			case 2:
+				dayOfTheWeek = "Tuesday";
+				break;
+			case 3:
+				dayOfTheWeek = "Wednesday";
+				break;
+			case 4:
+				dayOfTheWeek = "Thursday";
+				break;
+			case 5:
+				dayOfTheWeek = "Friday";
+				break;
+			case 6:
+				dayOfTheWeek = "Saturday";
+				break;
+			case 7:
+				dayOfTheWeek = "Sunday";
+				break;
+			default:
+				dayOfTheWeek = null;
+				break;
+		}
 		
-		     default: 
-		         dayType = "Invalid daytype"; 
-	     } 
-
-	     System.out.println(dayString + " is a " + dayType); 
+		switch(dayOfTheWeek)
+		{
+		case "Monday":
+		case "Tuesday":
+		case "Wednesday":
+		case "Thurday":
+		case "Friday": 
+			dayType = "Weekday";
+			break;
+		case "Saturday":
+		case "Sunday":
+			dayType = "Weekend";
+			break;
+		default:
+			dayType = null;
+			break;
+		}
+		
+		System.out.println("Day Of The Week :"+dayOfTheWeek);
+		System.out.println("Type Of The Day :"+dayType);
+		
+		sc.close();
 	}
 }

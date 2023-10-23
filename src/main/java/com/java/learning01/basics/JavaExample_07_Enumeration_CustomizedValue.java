@@ -1,7 +1,6 @@
 package com.java.learning01.basics;
 
 // Java program to demonstrate how values can be assigned to enums. 
-
 enum TrafficSignal 
 { 
 	 // This will call enum constructor with one String argument 
@@ -16,7 +15,7 @@ enum TrafficSignal
 	     return this.action; 
 	 } 
 
-	 // enum constructor - cannot be public or protected 
+	 // enum constructor - cannot be public or protected. It can be private or default.
 	 // This is because enum in Java contains fixed constant values. 
 	 // So, there is no point in having public or protected constructor 
 	 // as you cannot create instance of enum.

@@ -4,11 +4,13 @@ public class JavaExample_08_StringBuffer
 {
 	public static void main(String[] args) 
 	{
-		// StringBuffer is a peer class of String that provides much of the functionality of strings. 
+		// StringBuffer is a peer class of String that provides much of the functionality of String class.
+		
 		// String represents fixed-length, immutable character sequences while 
 		// StringBuffer represents growable and writable character sequences.
 		
 		// StringBuffer may have characters and substrings inserted in the middle or appended to the end. 
+		
 		// It will automatically grow to make room for such additions and often has more characters preallocated 
 		// than are actually needed, to allow room for growth.
 		
@@ -16,7 +18,7 @@ public class JavaExample_08_StringBuffer
 		StringBuffer s1 = new StringBuffer();
 		
 		//We can check by .capacity() method.
-		System.out.println("StringBuffer s Capacity: "+s1.capacity());
+		System.out.println("StringBuffer Capacity: "+s1.capacity());
 		
 		// It accepts an integer argument that explicitly sets the size of the buffer.
 		StringBuffer s = new StringBuffer(20);
@@ -26,9 +28,9 @@ public class JavaExample_08_StringBuffer
 		StringBuffer s2 = new StringBuffer("Geeks for Geeks");
 		System.out.println("StringBuffer s2 Capacity: "+s2.capacity());
 		
-        System.out.println("String buffer = " + s); 
-        System.out.println("String buffer = " + s1); 
-        System.out.println("String buffer = " + s2); 
+        System.out.println("String buffer s = " + s); 
+        System.out.println("String buffer s1 = " + s1); 
+        System.out.println("String buffer s2 = " + s2); 
         
         int length = s2.length(); 
         int capacity = s2.capacity(); 
@@ -36,21 +38,20 @@ public class JavaExample_08_StringBuffer
         // length( ) and capacity( ): The length of a StringBuffer can be found by the length( ) method, 
         // while the total allocated capacity can be found by the capacity( ) method.
         
-        System.out.println("Length of string GeeksforGeeks=" + length); 
-        System.out.println("Capacity of string GeeksforGeeks=" + capacity); 
+        System.out.println("Length of string GeeksforGeeks = " + length); 
+        System.out.println("Capacity of string GeeksforGeeks = " + capacity); 
         
         // append( ): It is used to add text at the end of the existence text. Here are a few of its forms:
         
-        s2.append(" is Awesome  is Awesome  is Awesome!");
-        System.out.println("String buffer = " + s2); 
+        s2.append(" is Awesome.");
+        System.out.println("String buffer = " + s2);
         
         s2.append(3);
-        System.out.println("String buffer = " + s2); 
+        System.out.println("String buffer = " + s2);
         
         // reverse( ): It can reverse the characters within a StringBuffer object using reverse( ). 
         // This method returns the reversed object on which it was called. 
         StringBuffer s3 = new StringBuffer("Geeks for Geeks");
-        
         s3.reverse();
         System.out.println("String buffer = " + s3);
         s3.reverse();
@@ -58,7 +59,8 @@ public class JavaExample_08_StringBuffer
         
         // delete( ) and deleteCharAt( ): It can delete characters within a StringBuffer by using the methods delete( ) 
         // and deleteCharAt( ).
-        StringBuffer s4 = new StringBuffer("GeeksforGeeks"); 
+        StringBuffer s4 = new StringBuffer("GeeksforGeeks");
+        System.out.println("s4:"+s4);
         
         //Starting from 0, Delete 5 characters.
         s4.delete(0, 5); 
@@ -71,6 +73,6 @@ public class JavaExample_08_StringBuffer
         //replace( ): It can replace one set of characters with another set inside a StringBuffer object by calling replace( ).
         StringBuffer s5 = new StringBuffer("GeeksforGeeks"); 
         s5.replace(5, 8, "are"); 
-        System.out.println(s); // returns GeeksareGeeks 
+        System.out.println(s5); // returns GeeksareGeeks 
 	}
 }

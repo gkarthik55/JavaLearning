@@ -6,16 +6,15 @@ enum Colors
 }
 
 //Java program to demonstrate working of values(), ordinal() and valueOf()
-
 public class JavaExample_06_Enumeration_PredefinedMethods 
 {
 	public static void main(String[] args) 
 	{
 		// Calling values() 
-        Colors arr[] = Colors.values(); 
+        Colors colors[] = Colors.values(); 
         
         // Looping through the Enum values.
-        for (Colors color : arr) 
+        for (Colors color : colors) 
         { 
             // Calling ordinal() to find index of color. 
             System.out.println(color + " at index " + color.ordinal()); 
